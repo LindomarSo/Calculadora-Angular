@@ -1,0 +1,35 @@
+<main id="main">
+    <h3>Angular 12</h3>
+    <input class="display" [value]="display" type="text">
+    <table class="table">
+      <tr>
+        <td><button (click)="limpar()" class="btn-bt" id="btn-C">C</button></td>
+        <td><button (click)="definirOperacao('multiplicar')" class="btn-bt" id="btn-x">x</button></td>
+        <td><button (click)="definirOperacao('/')" class="btn-bt" id="btn-/">/</button></td>
+        <td><button (click)="definirOperacao('+')" class="btn-bt" id="btn">+</button></td>
+      </tr>
+      <tr>
+        <td><button (click)="adicionarNumero('7')" class="btn-bt" id="btn-7">7</button></td>
+        <td><button (click)="adicionarNumero('8')" class="btn-bt" id="btn-8">8</button></td>
+        <td><button (click)="adicionarNumero('9')" class="btn-bt" id="btn-9">9</button></td>
+        <td><button (click)="definirOperacao('-')" class="btn-bt" id="btn">-</button></td>
+      </tr>
+      <tr>
+        <td><button (click)="adicionarNumero('4')" class="btn-bt" id="btn-4">4</button></td>
+        <td><button (click)="adicionarNumero('5')" class="btn-bt" id="btn-5">5</button></td>
+        <td><button (click)="adicionarNumero('6')" class="btn-bt" id="btn-6">6</button></td> 
+        <td><button (click)="definirOperacao('*')" class="btn-bt" id="btn-x">x</button></td>  
+        
+      </tr>
+      <tr>
+        <td><button (click)="adicionarNumero('1')" class="btn-bt" id="btn-1">1</button></td>  
+        <td><button (click)="adicionarNumero('2')" class="btn-bt" id="btn-2">2</button></td>  
+        <td><button (click)="adicionarNumero('3')" class="btn-bt" id="btn-3">3</button></td>  
+        <td rowspan="2"><button class="btn-bt" id="calc">=</button></td>  
+      </tr>
+      <tr>
+        <td colspan="2"><button (click)="adicionarNumero('0')" class="btn-bt" id="btn-0">0</button></td>  
+        <td><button (click)="adicionarNumero('.')" class="btn-bt" id="btn-.">.</button></td>  
+      </tr>
+    </table>
+  </main>

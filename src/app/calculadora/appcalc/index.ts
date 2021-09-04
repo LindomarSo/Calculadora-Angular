@@ -1,0 +1,1 @@
+export * from './appcalc.component';
