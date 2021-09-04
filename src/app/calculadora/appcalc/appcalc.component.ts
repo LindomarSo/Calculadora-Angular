@@ -45,11 +45,11 @@ export class AppcalcComponent implements OnInit {
     {
       numeroAtual = '';
     }
-    if(numConcatena === '.' || numeroAtual == '')
+    if(numConcatena === '.' && numeroAtual === '')
     {
       return '0.';
     }
-    if(numeroAtual === '.' && numeroAtual.indexOf('.') > -1)
+    if(numConcatena === '.' && numeroAtual.indexOf('.') > -1)
     {
       return numeroAtual;
     }
@@ -76,9 +76,25 @@ export class AppcalcComponent implements OnInit {
       this.resultado = null;
     }
   }
+
+  result(): void 
+  {
+    if(this.numberTow !== null)
+    {
+      this.resultado = this.calculadoraService.calcular(
+        parseFloat(this.numberOne),
+        parseFloat(this.numberTow),
+        this.operacao
+      );
+    }
+  }
   
   get display(): string
   {
+    if(this.resultado !== null)
+    {
+      return this.resultado.toString();
+    }
     if(this.numberTow !== null)
     {
       return this.numberTow;
